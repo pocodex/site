@@ -1,0 +1,33 @@
+<div class="m-4">
+  <% data.plugins.forEach( plugin => { %>
+  <div class="bg-primary shadow-lg rounded-lg inline-block mr-2 mb-2 w-48">
+    <div class="px-6 py-4">
+      <h1 class="text-2xl font-bold text-primary-content">
+        <%= plugin.name %>
+      </h1>
+      <p class="text-gray-700 text-base mt-2"><%= plugin.description %></p>
+
+      <div class="flex items-center justify-between mt-4">
+        <span class="text-gray-600 text-sm"
+          >Version: <%= plugin.version %></span
+        >
+        <span class="text-yellow-500 text-sm"><%= plugin.stars %> ⭐</span>
+      </div>
+
+      <div class="mt-4">
+        <a
+          href="<%= plugin.github_url %>"
+          target="_blank"
+          class="text-indigo-500 hover:underline"
+        >
+          View on GitHub
+        </a>
+      </div>
+
+      <div class="mt-2">
+        <span class="text-gray-600 text-sm">Owner: <%= plugin.owner %></span>
+      </div>
+    </div>
+  </div>
+  <% }) %>
+</div>

@@ -1,0 +1,1 @@
+# pocodex Plugin Authoring Guide
