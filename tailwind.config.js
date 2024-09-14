@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./app/**/*.{ejs,md}'],
+  content: ['./pb_hooks/pages/**/*.{ejs,md}'],
   theme: {
     extend: {},
   },
   daisyui: {
-    themes: ['cupcake'],
+    themes: ['aqua'],
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],
 }

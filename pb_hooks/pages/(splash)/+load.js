@@ -1,5 +1,6 @@
 module.exports = () => {
   return {
+    favorited: {},
     plugins: [
       {
         name: 'pages-daisyui',

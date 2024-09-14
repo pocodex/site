@@ -2,22 +2,24 @@
   "name": "@pocodex/site",
   "version": "0.0.1",
   "scripts": {
-    "pocketpages": "pocketpages",
-    "serve": "pocketpages serve --hooksDir=app --dev",
     "dev": "concurrently \"bun:dev:*\"",
-    "dev:serve": "pocketpages serve --hooksDir=app --dev",
-    "dev:css": "tailwindcss -i ./app/assets/app.tailwind.css -o ./app/assets/app.css --watch"
+    "pocketbase": "pocketbase --dir=pb_data",
+    "serve": "bun pocketbase serve",
+    "dev:serve": "bun run serve --dev",
+    "dev:css": "tailwindcss -i ./pb_hooks/pages/assets/app.tailwind.css -o ./pb_hooks/pages/assets/app.css --watch"
   },
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.14",
-    "concurrently": "^8.2.2",
+    "@tailwindcss/typography": "^0.5.15",
+    "concurrently": "^9.0.1",
     "daisyui": "^4.12.10",
+    "gobot-pocketbase": "^0.22.20-14",
     "postcss-import": "^16.1.0",
-    "tailwindcss": "^3.4.10",
-    "@types/env-paths": "^2.1.0"
+    "tailwindcss": "^3.4.11"
   },
   "dependencies": {
-    "pocketpages": "^0.4.1"
+    "pocketbase-jsvm": "^0.22.20001",
+    "pocketpages": "^0.5.0",
+    "pocodex": "^0.0.2"
   },
   "trustedDependencies": [
     "esbuild",
